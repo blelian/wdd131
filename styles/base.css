@@ -179,6 +179,7 @@ footer p {
     display: inline-block;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
