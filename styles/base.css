@@ -57,8 +57,10 @@ nav a {
     transition: color 0.3s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     color: var(--secondary-color);
+    outline: none;
 }
 
 main {
@@ -111,11 +113,14 @@ h3 {
     flex: 2;
 }
 
-.about-me img {
-    max-width: 120px;
+.about-me img,
+aside img {
+    width: 150px;
     height: auto;
+    max-width: 100%;
     border-radius: 6px;
     flex-shrink: 0;
+    border: 1px solid #ccc;
 }
 
 aside {
@@ -129,20 +134,12 @@ aside div {
     flex: 2;
 }
 
-aside img {
-    margin-top: 50px;
-    max-width: 120px;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    flex-shrink: 0;
-}
-
 .seperate {
     background-color: white;
 }
 
-.seperate ul {
+.seperate ul,
+.card ul {
     list-style-type: disc;
     padding-left: 1.5rem;
 }
@@ -153,22 +150,16 @@ aside img {
 }
 
 .seperate ul li a {
-    color: blue; 
+    color: blue;
     font-weight: bold;
 }
 
 .seperate ul li a:focus {
     color: purple;
-    font-weight: bold;
 }
 
 .seperate a:hover {
     color: var(--secondary-color);
-}
-
-.card ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
 }
 
 .card li {
@@ -186,4 +177,26 @@ footer {
 footer p {
     margin: 0;
     display: inline-block;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me img,
+    aside img {
+        width: 100%;
+        max-width: 150px;
+    }
 }
