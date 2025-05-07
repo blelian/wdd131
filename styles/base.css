@@ -1,0 +1,189 @@
+:root {
+    --primary-color: #204d74;
+    --secondary-color: #fcd34d;
+    --text-color: #1e1e1e;
+    --background-color: #fff;
+    --border-color: #999;
+    --card-background: #fefefe;
+    --font-family: 'Montserrat Alternates', sans-serif;
+    --font-size-small: small;
+    --font-size-medium: medium;
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header h1 span {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 0.5rem 0;
+    flex-wrap: wrap;
+    margin: 1rem -1rem -1rem -1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 2fr 1fr;
+    padding: 0 1rem;
+}
+
+.card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    background-color: var(--card-background);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #ccc;
+    margin: -1rem -1rem 1rem -1rem;
+    font-size: var(--font-size-medium);
+    color: white;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 1rem;
+    font-size: var(--font-size-medium);
+    color: var(--text-color);
+}
+
+.about-me {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.about-me p {
+    flex: 2;
+}
+
+.about-me img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+aside {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+aside div {
+    flex: 2;
+}
+
+aside img {
+    margin-top: 50px;
+    max-width: 120px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.seperate {
+    background-color: white;
+}
+
+.seperate ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.seperate ul li {
+    text-decoration: underline;
+    font-size: var(--font-size-small);
+}
+
+.seperate ul li a {
+    color: blue; 
+    font-weight: bold;
+}
+
+.seperate ul li a:focus {
+    color: purple;
+    font-weight: bold;
+}
+
+.seperate a:hover {
+    color: var(--secondary-color);
+}
+
+.card ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+    display: inline-block;
+}
