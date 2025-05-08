@@ -1,9 +1,6 @@
-// Get the current year
-const currentYear = new Date().getFullYear();
 
-// Output the current year in the footer's first paragraph
-document.getElementById("currentyear").textContent = currentYear;
+// Populate the current year
+document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-// Output the last modified date in the second paragraph
-const lastModifiedDate = document.lastModified;
-document.querySelector("footer p").innerHTML += `<br>Last Modified: ${lastModifiedDate}`;
+// Populate the last modified date in the second paragraph
+document.getElementById("lastmodified").textContent = `Last Modified: ${document.lastModified}`;
