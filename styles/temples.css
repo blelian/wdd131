@@ -94,6 +94,7 @@ figure img {
     height: auto;
     display: block;
     border-radius: 8px;
+    aspect-ratio: 4 / 3;
 }
 
 figcaption {
