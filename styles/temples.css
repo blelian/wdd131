@@ -24,12 +24,11 @@ body {
     border: 2px solid black;
 }
 
-header {
+header, footer {
     background-color: var(--primary-color);
     color: var(--text-light);
-    padding: 1rem;
-    position: relative;
     text-align: center;
+    padding: 1rem;
 }
 
 header h1 {
@@ -56,7 +55,6 @@ nav ul {
     padding: 1rem 0;
     background-color: var(--primary-color);
     list-style: none;
-    margin: 0;
 }
 
 nav.open ul {
@@ -85,8 +83,11 @@ main {
 }
 
 main h1 {
-    color: var(--text-dark);
     margin-bottom: 1rem;
+}
+
+figure {
+    text-align: center;
 }
 
 figure img {
@@ -94,6 +95,7 @@ figure img {
     max-width: 198px;
     height: auto;
     display: block;
+    margin: 0 auto;
     border-radius: 8px;
     aspect-ratio: 4 / 3;
 }
@@ -105,9 +107,5 @@ figcaption {
 }
 
 footer {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    text-align: center;
-    padding: 1rem;
     font-size: 0.9rem;
 }
