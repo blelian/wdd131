@@ -91,6 +91,7 @@ main h1 {
 
 figure img {
     width: 100%;
+    max-width: 198px;
     height: auto;
     display: block;
     border-radius: 8px;
