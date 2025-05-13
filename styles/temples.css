@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 :root {
     --primary-color: #270e59;
     --text-light: #ffffff;
@@ -17,7 +15,7 @@
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: sans-serif;
     line-height: 1.6;
     background-color: #fff;
     color: var(--text-dark);
@@ -108,4 +106,10 @@ figcaption {
 
 footer {
     font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
 }
