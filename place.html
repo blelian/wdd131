@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 – Dynamic Web Fundamentals – Blessing Mpofu</title>
+  <meta name="description" content="Explore the personal journey of Blessing Mpofu as he studies web development in the WDD 131 - Dynamic Web Fundamentals course." />
+  <meta name="author" content="Blessing Mpofu" />
+  <link rel="stylesheet" href="styles/place.css" />
+  <!--<link rel="stylesheet" href="styles/place-larger.css" />-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet" />
+  </noscript>
+  <script src="scripts/place.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Victoria Falls</h1>
+  </header>
+  <div class="red-bar"></div>
+
+  <main>
+    <div class="hero">
+      <picture>
+        <source media="(min-width: 1000px)" srcset="images/hero-large.webp" />
+        <source media="(min-width: 500px)" srcset="images/hero-medium.webp" />
+        <img src="images/hero-small.webp" alt="Victoria Falls" width="400" height="200" />
+      </picture>
+    </div>
+
+    <div class="main-content">
+      <div class="container">
+        <div class="data">
+        <h2>Data</h2>
+        </div>
+        <dl>
+          <div><dt>Area:</dt><dd>100 sq km</dd></div>
+          <div><dt>Population:</dt><dd>35,000</dd></div>
+          <div><dt>Capital:</dt><dd>Victoria Falls cbd</dd></div>
+          <div><dt>Languages:</dt><dd>English, IsiNdebele, ChiShona</dd></div>
+          <div><dt>Currency:</dt><dd>USD</dd></div>
+          <div><dt>Time Zone:</dt><dd>CAT</dd></div>
+          <div><dt>Calling Code:</dt><dd>+263</dd></div>
+          <div><dt>Internet TLD:</dt><dd>.zw</dd></div>
+        </dl>
+      </div>
+
+      <div class="section">
+        <h2>Weather</h2>
+        <img src="images/weather-icon.svg" alt="Partly Cloudy" class="weather-icon">
+        <dl>
+          <div><dt>Temperature:</dt><dd>10ºC</dd></div>
+          <div><dt>Conditions:</dt><dd>Partly Cloudy</dd></div>
+          <div><dt>Wind:</dt><dd>5 km/hr</dd></div>
+          <div><dt>Wind Chill:</dt><dd id="windchill">Loading...</dd></div>
+        </dl>
+      </div>
+    </div>
+  </main>
+
+  <div class="main-footer-gap"></div>
+  <div class="main-footer-gap"></div>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Blessing Mpofu, Victoria Falls, Zimbabwe</p>
+    <p id="lastmodified"></p>
+  </footer>
+</body>
+</html>
