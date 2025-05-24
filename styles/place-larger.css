@@ -42,26 +42,30 @@
   }
 
   main {
-    flex: 1;
+    flex-grow: 1;
     position: relative;
     width: 100%;
-    height: 100%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+    inset: 0;
     z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
   }
 
   .hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
   }
 
   .main-content {
@@ -73,7 +77,6 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    height: 100%;
     z-index: 1;
   }
 
@@ -83,10 +86,12 @@
     border-radius: 10px;
     width: fit-content;
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .container h2 {
-    background-color: var(--accent-color);
+    background-color: var(--highlight-color);
     color: var(--text-color);
     padding: 0.5rem 1rem;
     margin-bottom: 0.5rem;
@@ -95,9 +100,15 @@
   }
 
   .container dl {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .container dl div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .section {
@@ -115,7 +126,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: var(--accent-color);
+    background-color: var(--highlight-color);
     color: var(--text-color);
     padding: 0.5rem 1rem;
     margin-bottom: 0.5rem;
@@ -123,21 +134,41 @@
     width: fit-content;
   }
 
-  .section h2 svg {
-    width: 24px;
-    height: 24px;
-    fill: var(--text-color);
+  .section dl {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  .section dl {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.5rem 1rem;
+  .section dl div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .weather-icon {
     display: block;
     margin: 0 auto 1rem auto;
     max-width: 100px;
+  }
+
+  .container dt,
+  .container dd,
+  .section dt,
+  .section dd {
+    margin: 0;
+    padding: 0 5px;
+    text-align: left;
+  }
+
+  .container dt,
+  .section dt {
+    font-weight: bold;
+    max-width: 200px;
+  }
+
+  .container dd,
+  .section dd {
+    text-align: left;
   }
 }

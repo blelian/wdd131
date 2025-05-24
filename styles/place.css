@@ -4,6 +4,7 @@
   --primary-color: #F0F1F3;
   --body-background: #f0ebeb;
   --accent-color: #a91b0d;
+  --main-color: black;
 }
 
 body {
@@ -13,23 +14,23 @@ body {
   margin: 0;
   background-color: var(--body-background);
 }
-. h2{
+
+h2 {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
-header, footer {
+
+header,
+footer {
   color: var(--primary-color);
-  width: 80%;
+  width: 88%;
   max-width: 640px;
   text-align: center;
   background-color: var(--background-color);
-  margin: 0; 
-}
-.data{
-  border-bottom: 10px solid var(--accent-color);
-  width: 216%;
+  margin: 0;
 }
 
 main {
@@ -38,22 +39,32 @@ main {
   align-items: center;
   width: 80%;
   max-width: 600px;
-  margin: 20px auto; 
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  margin: 0 auto;
+  background-color: var(--text-color);
+  color: var(--main-color);
   padding: 20px;
+  padding-top: 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  
 }
 
+.hero {
+  width: 106.67%;
+  margin-left: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero picture,
 .hero img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
-.container, .section {
+.container,
+.section {
   width: 100%;
   margin-top: 20px;
   display: flex;
@@ -61,15 +72,16 @@ main {
   align-items: center;
 }
 
-.container dl, .section dl {
+.container dl,
+.section dl {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   align-items: center;
 }
 
-.container dl div, .section dl div {
+.container dl div,
+.section dl div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,19 +89,24 @@ main {
   max-width: 500px;
 }
 
-.container dt, .container dd, .section dt, .section dd {
+.container dt,
+.container dd,
+.section dt,
+.section dd {
   margin: 0;
   padding: 0 5px;
   flex: 1;
   text-align: center;
 }
 
-.container dt, .section dt {
+.container dt,
+.section dt {
   font-weight: bold;
   max-width: 200px;
 }
 
-.container dd, .section dd {
+.container dd,
+.section dd {
   text-align: center;
 }
 
@@ -101,11 +118,12 @@ header::after {
 }
 
 .main-footer-gap {
-  height: 20px;
-  width: 80%;
+  height: 10px;
+  width: 88%;
   max-width: 640px;
   background-color: var(--accent-color);
 }
+
 .weather-icon {
   width: 80px;
   height: auto;
