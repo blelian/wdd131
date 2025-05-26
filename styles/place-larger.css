@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap');
+
 @media screen and (min-width: 601px) {
   :root {
     --background-color: #ffffff;
@@ -26,6 +28,16 @@
     min-height: 100vh;
     background-color: var(--background-color);
   }
+  header h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--highlight-color);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
 
   header, footer {
     width: 900px;
