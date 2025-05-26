@@ -28,44 +28,37 @@
   }
 
   header, footer {
-    width: 100%;
+    width: 900px;
+    max-width: 100%;
     background-color: var(--header-footer-color);
     color: var(--text-color);
     text-align: center;
     padding: 1rem;
+    margin: 0 auto;
   }
 
   .red-bar {
-    width: 100%;
+    width: 900px;
+    max-width: 100%;
     height: 15px;
     background-color: var(--highlight-color);
+    margin: 0 auto;
   }
 
   main {
     flex-grow: 1;
     position: relative;
     width: 100%;
+    max-width: 900px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .hero {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-  }
-
-  .hero img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    display: block;
+    background-image: url(../images/hero-large.webp);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
   }
 
   .main-content {
@@ -75,22 +68,23 @@
     align-items: flex-start;
     padding: 2rem;
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     z-index: 1;
   }
 
-  .container {
+  .container, .section {
     background-color: var(--container-bg);
     padding: 1rem;
     border-radius: 10px;
-    width: fit-content;
-    max-width: 100%;
+    width: 48%;
+    max-width: 48%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
   }
 
-  .container h2 {
+  .container h2, .section h2 {
     background-color: var(--highlight-color);
     color: var(--text-color);
     padding: 0.5rem 1rem;
@@ -99,51 +93,20 @@
     width: fit-content;
   }
 
-  .container dl {
+  .container dl, .section dl {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
 
-  .container dl div {
+  .container dl div, .section dl div {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   .section {
-    background-color: var(--container-bg);
-    padding: 1rem;
-    border-radius: 10px;
-    width: fit-content;
-    max-width: 100%;
-    align-self: flex-start;
-    margin-left: auto;
-    text-align: right;
-  }
-
-  .section h2 {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: var(--highlight-color);
-    color: var(--text-color);
-    padding: 0.5rem 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 6px 6px 0 0;
-    width: fit-content;
-  }
-
-  .section dl {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .section dl div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: left;
   }
 
   .weather-icon {
