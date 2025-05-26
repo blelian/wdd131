@@ -19,6 +19,9 @@
     width: 100%;
   }
 
+  .mobile-only{
+    display: none;
+  }
   body {
     font-family: sans-serif;
     display: flex;
