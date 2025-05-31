@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore various temples around the world.">
+    <meta name="author" content="Blessing Mpofu, student of WDD131 - Dynamic Web Fundamentals at BYU-Idaho">
+    <title>Temple Album</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/filtered-temple.css" media="screen and (max-width: 600px)">
+    <link rel="stylesheet" href="styles/filtered-temple-larger.css" media="screen and (min-width: 601px)">
+    <script src="scripts/filtered-temple.js" defer></script>
+    <script src="./scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+        <p>Temple Album</p>
+        </div>
+        <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="large">Large</a></li>
+                <li><a href="#" id="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temple Album Home</h1>
+        <h2>Explore Our Temple Collection</h2> 
+        <div class="grid" id="temple-cards"></div>
+    </main>
+
+    <footer>
+    <p>&copy; <span id="currentyear"></span> Blessing Mpofu, Selected Temples, LDS</p>
+    <p id="lastmodified"></p>
+  </footer>
+</body>
+</html>
