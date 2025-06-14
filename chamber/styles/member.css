@@ -9,16 +9,32 @@
   --bg:      #f4f4f4;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+   box-sizing: border-box; 
+   margin: 0; 
+   padding: 0; 
+  }
 
-.header-container { background: #D9D9EC; position: relative; padding: 1rem; }
+.header-container { 
+  background: #D9D9EC; 
+  position: relative; 
+  padding: 1rem; 
+}
 
 header {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
 }
-.logo { width: 80px; }
-.header-content { flex: 1; margin-left: .5rem; }
-.header-title    { font-size: 1.75rem; color: var(--primary-color); }
+.logo { 
+  width: 80px; 
+}
+.header-content { 
+  flex: 1; 
+  margin-left: .5rem; 
+}
+.header-title    { 
+  font-size: 1.75rem; color: var(--primary-color); }
 .header-subtitle { font-size: 1rem; color: var(--primary-color); opacity: .85; }
 
 #menu-toggle {
@@ -27,23 +43,31 @@ header {
 }
 
 #primary-nav {
-  display: none; position: absolute; top: 100%; right: 1rem;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 1rem;
   background: var(--light); border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0,0,0,.2);
 }
 #primary-nav.open {
-  display: flex; flex-direction: column;
+  display: flex; 
+  flex-direction: column;
 }
 #primary-nav ul {
   list-style: none;
 }
 #primary-nav li a {
-  display: block; padding: .75rem 1.5rem;
-  color: var(--primary); text-decoration: none; font-weight: 700;
+  display: block; 
+  padding: .75rem 1.5rem;
+  color: var(--primary); 
+  text-decoration: none; 
+  font-weight: 700;
 }
 #primary-nav li a:hover,
 #primary-nav li a.active {
-  background: var(--primary-color); color: var(--light);
+  background: var(--primary-color); 
+  color: var(--light);
 }
 
 * {
@@ -55,7 +79,6 @@ header {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   font-weight: bold;
@@ -100,7 +123,6 @@ header {
   font-size: clamp(2rem, 4vw, 3rem);
   color: var(--primary-color);
   margin: 20px 0 0;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
@@ -185,7 +207,6 @@ main h1 {
   padding: 1rem 0;
   text-align: center;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .toggle-controls {
@@ -249,9 +270,6 @@ main h1 {
   aspect-ratio: 1 / 1;
 }
 
-footer {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  text-align: center;
-  padding: 1rem;
+footer{
+  font-weight: normal;
 }
