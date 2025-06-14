@@ -1,0 +1,272 @@
+:root {
+  --primary-color: #2F2A6A;
+  --secondary-color: #3c6382;
+  --accent-color: #1b4f72;
+  --background-color: #f5f6fa;
+  --text-color:  #ffffff;
+  --highlight-color: #d9d9ec;
+  --header-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+  --image-background: #D9D9EC;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: var(--image-background);
+  color: var(--primary-color);
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  font-family: var(--header-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-subtitle {
+  font-family: var(--header-font);
+  font-size: 1rem;
+  margin: 0;
+}
+
+#menu-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-left: auto;
+  display: block;
+}
+
+nav {
+  background-color: var(--image-background);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+}
+
+nav ul.show {
+  display: flex;
+}
+
+nav li {
+  border-top: 1px solid var(--accent-color);
+}
+
+nav a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  min-height: 180px;
+  max-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.hero picture,
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 90%;
+  overflow-wrap: break-word;
+}
+
+.hero-text .big {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 700;
+}
+
+.hero .cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.hero .cta:hover {
+  background-color: #ffffff;
+  color: var(--primary-color);
+}
+
+h1,
+h2 {
+  font-family: var(--header-font);
+  color: var(--primary-color);
+}
+
+main {
+  padding: 1rem;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.info-row section:nth-child(odd) {
+  background-color: var(--highlight-color);
+}
+
+.info-row section:nth-child(even) {
+  background-color: var(--highlight-color);
+}
+
+.info-row section {
+  padding: 1rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.events {
+  background: url('../images/upcoming-events.webp') center/cover no-repeat;
+  color: black;
+  position: relative;
+  background-blend-mode: overlay;
+}
+
+.events h2,
+.events ul {
+  position: relative;
+  z-index: 2;
+}
+
+.featured-businesses {
+  padding: 1rem;
+  background-color: var(--highlight-color);
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.featured-grid .card {
+  border: 1px solid var(--accent-color);
+  padding: 1rem;
+  background-color: #fff;
+  color: black;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.featured-grid img {
+  width: 100px;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+@media (min-width: 801px) {
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .featured-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .info-row {
+    flex-direction: row;
+  }
+
+  .info-row section {
+    flex: 1;
+  }
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
